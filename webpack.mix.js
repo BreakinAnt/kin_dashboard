@@ -15,7 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/adminkit/scss/app.scss', 'public/adminkit/css')
 
     .copy('resources/adminkit/assets/img', 'public/adminkit/img')
-    .copy('resources/adminkit/assets/fonts', 'public/adminkit/fonts')
 
     .browserSync({
         proxy: '127.0.0.1:8000',
