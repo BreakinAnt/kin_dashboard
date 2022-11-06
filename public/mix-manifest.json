@@ -1,4 +1,15 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/adminkit/js/app.js": "/adminkit/js/app.js",
+    "/adminkit/css/app.css": "/adminkit/css/app.css",
+    "/css/app.css": "/css/app.css",
+    "/adminkit/img/avatars/avatar-2.jpg": "/adminkit/img/avatars/avatar-2.jpg",
+    "/adminkit/img/avatars/avatar-3.jpg": "/adminkit/img/avatars/avatar-3.jpg",
+    "/adminkit/img/avatars/avatar-4.jpg": "/adminkit/img/avatars/avatar-4.jpg",
+    "/adminkit/img/avatars/avatar-5.jpg": "/adminkit/img/avatars/avatar-5.jpg",
+    "/adminkit/img/avatars/avatar.jpg": "/adminkit/img/avatars/avatar.jpg",
+    "/adminkit/img/icons/icon-48x48.png": "/adminkit/img/icons/icon-48x48.png",
+    "/adminkit/img/photos/unsplash-1.jpg": "/adminkit/img/photos/unsplash-1.jpg",
+    "/adminkit/img/photos/unsplash-2.jpg": "/adminkit/img/photos/unsplash-2.jpg",
+    "/adminkit/img/photos/unsplash-3.jpg": "/adminkit/img/photos/unsplash-3.jpg"
 }
