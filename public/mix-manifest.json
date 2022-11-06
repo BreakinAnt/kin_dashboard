@@ -1,15 +1,15 @@
 {
     "/js/app.js": "/js/app.js",
-    "/adminkit/js/app.js": "/adminkit/js/app.js",
-    "/adminkit/css/app.css": "/adminkit/css/app.css",
+    "/adminkit/assets/js/app.js": "/adminkit/assets/js/app.js",
+    "/adminkit/assets/css/app.css": "/adminkit/assets/css/app.css",
     "/css/app.css": "/css/app.css",
-    "/adminkit/img/avatars/avatar-2.jpg": "/adminkit/img/avatars/avatar-2.jpg",
-    "/adminkit/img/avatars/avatar-3.jpg": "/adminkit/img/avatars/avatar-3.jpg",
-    "/adminkit/img/avatars/avatar-4.jpg": "/adminkit/img/avatars/avatar-4.jpg",
-    "/adminkit/img/avatars/avatar-5.jpg": "/adminkit/img/avatars/avatar-5.jpg",
-    "/adminkit/img/avatars/avatar.jpg": "/adminkit/img/avatars/avatar.jpg",
-    "/adminkit/img/icons/icon-48x48.png": "/adminkit/img/icons/icon-48x48.png",
-    "/adminkit/img/photos/unsplash-1.jpg": "/adminkit/img/photos/unsplash-1.jpg",
-    "/adminkit/img/photos/unsplash-2.jpg": "/adminkit/img/photos/unsplash-2.jpg",
-    "/adminkit/img/photos/unsplash-3.jpg": "/adminkit/img/photos/unsplash-3.jpg"
+    "/adminkit/assets/img/avatars/avatar-2.jpg": "/adminkit/assets/img/avatars/avatar-2.jpg",
+    "/adminkit/assets/img/avatars/avatar-3.jpg": "/adminkit/assets/img/avatars/avatar-3.jpg",
+    "/adminkit/assets/img/avatars/avatar-4.jpg": "/adminkit/assets/img/avatars/avatar-4.jpg",
+    "/adminkit/assets/img/avatars/avatar-5.jpg": "/adminkit/assets/img/avatars/avatar-5.jpg",
+    "/adminkit/assets/img/avatars/avatar.jpg": "/adminkit/assets/img/avatars/avatar.jpg",
+    "/adminkit/assets/img/icons/icon-48x48.png": "/adminkit/assets/img/icons/icon-48x48.png",
+    "/adminkit/assets/img/photos/unsplash-1.jpg": "/adminkit/assets/img/photos/unsplash-1.jpg",
+    "/adminkit/assets/img/photos/unsplash-2.jpg": "/adminkit/assets/img/photos/unsplash-2.jpg",
+    "/adminkit/assets/img/photos/unsplash-3.jpg": "/adminkit/assets/img/photos/unsplash-3.jpg"
 }

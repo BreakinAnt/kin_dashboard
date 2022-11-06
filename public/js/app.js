@@ -23972,10 +23972,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/adminkit/scss/app.scss":
-/*!******************************************!*\
-  !*** ./resources/adminkit/scss/app.scss ***!
-  \******************************************/
+/***/ "./resources/adminkit/assets/scss/app.scss":
+/*!*************************************************!*\
+  !*** ./resources/adminkit/assets/scss/app.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26493,13 +26493,17 @@ function compileToFunction(template, options) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./Index": [
-		"./resources/views/adminkit/Index.vue",
-		"resources_views_adminkit_Index_vue"
+	"./": [
+		"./resources/views/adminkit/index.vue",
+		"resources_views_adminkit_index_vue"
 	],
-	"./Index.vue": [
-		"./resources/views/adminkit/Index.vue",
-		"resources_views_adminkit_Index_vue"
+	"./index": [
+		"./resources/views/adminkit/index.vue",
+		"resources_views_adminkit_index_vue"
+	],
+	"./index.vue": [
+		"./resources/views/adminkit/index.vue",
+		"resources_views_adminkit_index_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -26650,7 +26654,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_views_adminkit_Index_vue") return "js/" + chunkId + ".js";
+/******/ 			if (chunkId === "resources_views_adminkit_index_vue") return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -26762,7 +26766,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"adminkit/css/app": 0,
+/******/ 			"adminkit/assets/css/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -26775,7 +26779,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^(|adminkit\/)css\/app$/.test(chunkId)) {
+/******/ 						if(!/^(|adminkit\/assets\/)css\/app$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -26850,9 +26854,9 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["adminkit/css/app","css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["adminkit/css/app","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["adminkit/css/app","css/app"], () => (__webpack_require__("./resources/adminkit/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["adminkit/assets/css/app","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["adminkit/assets/css/app","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["adminkit/assets/css/app","css/app"], () => (__webpack_require__("./resources/adminkit/assets/scss/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
