@@ -388,76 +388,7 @@
         </div>
       </main>
 
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="row text-muted">
-            <div class="col-6 text-start">
-              <p class="mb-0">
-                <a
-                  class="text-muted"
-                  href="https://adminkit.io/"
-                  target="_blank"
-                >
-                  <strong>AdminKit</strong>
-                </a>
-                -
-                <a
-                  class="text-muted"
-                  href="https://adminkit.io/"
-                  target="_blank"
-                >
-                  <strong>Bootstrap Admin Template</strong>
-                </a>
-                &copy;
-              </p>
-            </div>
-
-            <div class="col-6 text-end">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a
-                    class="text-muted"
-                    href="https://adminkit.io/"
-                    target="_blank"
-                  >
-                    Support
-                  </a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a
-                    class="text-muted"
-                    href="https://adminkit.io/"
-                    target="_blank"
-                  >
-                    Help Center
-                  </a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a
-                    class="text-muted"
-                    href="https://adminkit.io/"
-                    target="_blank"
-                  >
-                    Privacy
-                  </a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a
-                    class="text-muted"
-                    href="https://adminkit.io/"
-                    target="_blank"
-                  >
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </div>
 </template>
@@ -465,37 +396,7 @@
 <script setup>
   import { onMounted } from 'vue';
   import { Icon } from '@iconify/vue';
-  import Chart from 'chart.js';
-
-  import Sidebar from '@adminkit/components/Sidebar';
   import '@adminkit/assets/js/app.js';
-
-  onMounted(() => {
-    // Pie chart
-    new Chart(document.getElementById('chartjs-dashboard-pie'), {
-      type: 'pie',
-      data: {
-        labels: ['Chrome', 'Firefox', 'IE'],
-        datasets: [
-          {
-            data: [4306, 3801, 1689],
-            backgroundColor: [
-              window.theme.primary,
-              window.theme.warning,
-              window.theme.danger,
-            ],
-            borderWidth: 5,
-          },
-        ],
-      },
-      options: {
-        responsive: !window.MSInputMethodContext,
-        maintainAspectRatio: false,
-        legend: {
-          display: false,
-        },
-        cutoutPercentage: 75,
-      },
-    });
-  });
+  import Sidebar from '@adminkit/components/Sidebar';
+  import Footer from '@adminkit/components/Footer';
 </script>
