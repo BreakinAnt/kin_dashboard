@@ -3,11 +3,13 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/adminkit/assets/js/app.js', 'public/adminkit/js')
+    .vue({
+        version: 3,
+    })
 
     .alias({
         '@adminkit': path.resolve(__dirname, 'resources/adminkit'),
     })
-    .vue()
 
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/adminkit/scss/app.scss', 'public/adminkit/css')
