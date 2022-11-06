@@ -14,7 +14,7 @@ yarn-error.log
 /.idea
 /.vscode
 
-/adminkit
-/css
-/js
-mix-manifest.json
+/public/adminkit
+/public/css
+/public/js
+/public/mix-manifest.json
