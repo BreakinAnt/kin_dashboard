@@ -113,60 +113,60 @@
     </div>
   </nav>
 </template>
+
 <script setup>
-import { Icon } from '@iconify/vue';
-import { onMounted, ref } from "vue";
-import SimpleBar from "simplebar";
+  import { Icon } from '@iconify/vue';
+  import { onMounted, ref } from 'vue';
+  import SimpleBar from 'simplebar';
 
-// Usage: https://github.com/Grsmto/simplebar
-const initialize = () => {
-  initializeSimplebar();
-  initializeSidebarCollapse();
-};
+  // Usage: https://github.com/Grsmto/simplebar
+  const initialize = () => {
+    initializeSimplebar();
+    initializeSidebarCollapse();
+  };
 
-const initializeSimplebar = () => {
-  const simplebarElement = document.getElementsByClassName("js-simplebar")[0];
+  const initializeSimplebar = () => {
+    const simplebarElement = document.getElementsByClassName('js-simplebar')[0];
 
-  if (simplebarElement) {
-    const simplebarInstance = new SimpleBar(
-      document.getElementsByClassName("js-simplebar")[0]
-    );
+    if (simplebarElement) {
+      const simplebarInstance = new SimpleBar(
+        document.getElementsByClassName('js-simplebar')[0]
+      );
 
-    /* Recalculate simplebar on sidebar dropdown toggle */
-    const sidebarDropdowns = document.querySelectorAll(
-      ".js-sidebar [data-bs-parent]"
-    );
+      /* Recalculate simplebar on sidebar dropdown toggle */
+      const sidebarDropdowns = document.querySelectorAll(
+        '.js-sidebar [data-bs-parent]'
+      );
 
-    sidebarDropdowns.forEach((link) => {
-      link.addEventListener("shown.bs.collapse", () => {
-        simplebarInstance.recalculate();
+      sidebarDropdowns.forEach(link => {
+        link.addEventListener('shown.bs.collapse', () => {
+          simplebarInstance.recalculate();
+        });
+        link.addEventListener('hidden.bs.collapse', () => {
+          simplebarInstance.recalculate();
+        });
       });
-      link.addEventListener("hidden.bs.collapse", () => {
-        simplebarInstance.recalculate();
+    }
+  };
+
+  const initializeSidebarCollapse = () => {
+    const sidebarElement = document.getElementsByClassName('js-sidebar')[0];
+    const sidebarToggleElement =
+      document.getElementsByClassName('js-sidebar-toggle')[0];
+
+    if (sidebarElement && sidebarToggleElement) {
+      sidebarToggleElement.addEventListener('click', () => {
+        sidebarElement.classList.toggle('collapsed');
+
+        sidebarElement.addEventListener('transitionend', () => {
+          window.dispatchEvent(new Event('resize'));
+        });
       });
-    });
-  }
-};
+    }
+  };
 
-const initializeSidebarCollapse = () => {
-  const sidebarElement = document.getElementsByClassName("js-sidebar")[0];
-  const sidebarToggleElement =
-    document.getElementsByClassName("js-sidebar-toggle")[0];
-
-  if (sidebarElement && sidebarToggleElement) {
-    sidebarToggleElement.addEventListener("click", () => {
-
-      sidebarElement.classList.toggle("collapsed");
-
-      sidebarElement.addEventListener("transitionend", () => {
-        window.dispatchEvent(new Event("resize"));
-      });
-    });
-  }
-};
-
-onMounted(() => {
-  // Wait until page is loaded
-  initialize();
-});
+  onMounted(() => {
+    // Wait until page is loaded
+    initialize();
+  });
 </script>
