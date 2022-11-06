@@ -13,3 +13,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+/adminkit
+/css
+/js
+mix-manifest.json
