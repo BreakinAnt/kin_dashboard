@@ -12,7 +12,7 @@ mix.js('resources/js/app.js', 'public/js')
     })
 
     .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/adminkit/scss/app.scss', 'public/adminkit/css')
+    .sass('resources/adminkit/assets/scss/app.scss', 'public/adminkit/css')
 
     .copy('resources/adminkit/assets/img', 'public/adminkit/img')
 

@@ -424,7 +424,7 @@
   import Chart from 'chart.js';
 
   import Sidebar from '@adminkit/components/Sidebar';
-  import '@adminkit/js/app.js';
+  import '@adminkit/assets/js/app.js';
 
   onMounted(() => {
     // Pie chart
