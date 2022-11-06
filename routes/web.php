@@ -17,7 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return Inertia::render('Index');
 })->name('index');
-
-Route::get('/penis', function () {
-    return Inertia::render('Teste');
-})->name('penis');

@@ -4145,6 +4145,87 @@ function withinMaxClamp(min, value, max) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _iconify_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @iconify/vue */ "./node_modules/@iconify/vue/dist/iconify.mjs");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
+
+
+
+
+// Usage: https://github.com/Grsmto/simplebar
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  __name: 'Sidebar',
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
+    expose();
+    var initialize = function initialize() {
+      initializeSimplebar();
+      initializeSidebarCollapse();
+    };
+    var initializeSimplebar = function initializeSimplebar() {
+      var simplebarElement = document.getElementsByClassName("js-simplebar")[0];
+      if (simplebarElement) {
+        var simplebarInstance = new simplebar__WEBPACK_IMPORTED_MODULE_2__["default"](document.getElementsByClassName("js-simplebar")[0]);
+
+        /* Recalculate simplebar on sidebar dropdown toggle */
+        var sidebarDropdowns = document.querySelectorAll(".js-sidebar [data-bs-parent]");
+        sidebarDropdowns.forEach(function (link) {
+          link.addEventListener("shown.bs.collapse", function () {
+            simplebarInstance.recalculate();
+          });
+          link.addEventListener("hidden.bs.collapse", function () {
+            simplebarInstance.recalculate();
+          });
+        });
+      }
+    };
+    var initializeSidebarCollapse = function initializeSidebarCollapse() {
+      var sidebarElement = document.getElementsByClassName("js-sidebar")[0];
+      var sidebarToggleElement = document.getElementsByClassName("js-sidebar-toggle")[0];
+      if (sidebarElement && sidebarToggleElement) {
+        sidebarToggleElement.addEventListener("click", function () {
+          sidebarElement.classList.toggle("collapsed");
+          sidebarElement.addEventListener("transitionend", function () {
+            window.dispatchEvent(new Event("resize"));
+          });
+        });
+      }
+    };
+    (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(function () {
+      // Wait until page is loaded
+      initialize();
+    });
+    var __returned__ = {
+      initialize: initialize,
+      initializeSimplebar: initializeSimplebar,
+      initializeSidebarCollapse: initializeSidebarCollapse,
+      Icon: _iconify_vue__WEBPACK_IMPORTED_MODULE_0__.Icon,
+      onMounted: vue__WEBPACK_IMPORTED_MODULE_1__.onMounted,
+      ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
+      SimpleBar: simplebar__WEBPACK_IMPORTED_MODULE_2__["default"]
+    };
+    Object.defineProperty(__returned__, '__isScriptSetup', {
+      enumerable: false,
+      value: true
+    });
+    return __returned__;
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/views/adminkit/Index.vue?vue&type=script&setup=true&lang=js":
 /*!***********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/views/adminkit/Index.vue?vue&type=script&setup=true&lang=js ***!
@@ -4156,11 +4237,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _adminkit_js_app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @adminkit/js/app.js */ "./resources/adminkit/js/app.js");
-/* harmony import */ var _adminkit_components_Sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @adminkit-components/Sidebar */ "./resources/components/adminkit/Sidebar.vue");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _adminkit_components_Sidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @adminkit-components/Sidebar */ "./resources/components/adminkit/Sidebar.vue");
+/* harmony import */ var _iconify_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @iconify/vue */ "./node_modules/@iconify/vue/dist/iconify.mjs");
+/* harmony import */ var _adminkit_js_app_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @adminkit/js/app.js */ "./resources/adminkit/js/app.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
 
 
 
@@ -4170,9 +4253,9 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    (0,vue__WEBPACK_IMPORTED_MODULE_3__.onMounted)(function () {
+    (0,vue__WEBPACK_IMPORTED_MODULE_4__.onMounted)(function () {
       // Pie chart
-      new (chart_js__WEBPACK_IMPORTED_MODULE_2___default())(document.getElementById("chartjs-dashboard-pie"), {
+      new (chart_js__WEBPACK_IMPORTED_MODULE_3___default())(document.getElementById("chartjs-dashboard-pie"), {
         type: "pie",
         data: {
           labels: ["Chrome", "Firefox", "IE"],
@@ -4193,9 +4276,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     });
     var __returned__ = {
-      Sidebar: _adminkit_components_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"],
-      Chart: (chart_js__WEBPACK_IMPORTED_MODULE_2___default()),
-      onMounted: vue__WEBPACK_IMPORTED_MODULE_3__.onMounted
+      Sidebar: _adminkit_components_Sidebar__WEBPACK_IMPORTED_MODULE_0__["default"],
+      Icon: _iconify_vue__WEBPACK_IMPORTED_MODULE_1__.Icon,
+      Chart: (chart_js__WEBPACK_IMPORTED_MODULE_3___default()),
+      onMounted: vue__WEBPACK_IMPORTED_MODULE_4__.onMounted
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -4224,9 +4308,9 @@ var _hoisted_1 = {
   id: "sidebar",
   "class": "sidebar js-sidebar"
 };
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"sidebar-content js-simplebar\"><a class=\"sidebar-brand\" href=\"index.html\"><span class=\"align-middle\">AdminKit</span></a><ul class=\"sidebar-nav\"><li class=\"sidebar-header\"> Pages </li><li class=\"sidebar-item active\"><a class=\"sidebar-link\" href=\"index.html\"><i class=\"align-middle\" data-feather=\"sliders\"></i> <span class=\"align-middle\">Dashboard</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-profile.html\"><i class=\"align-middle\" data-feather=\"user\"></i> <span class=\"align-middle\">Profile</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-sign-in.html\"><i class=\"align-middle\" data-feather=\"log-in\"></i> <span class=\"align-middle\">Sign In</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-sign-up.html\"><i class=\"align-middle\" data-feather=\"user-plus\"></i> <span class=\"align-middle\">Sign Up</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-blank.html\"><i class=\"align-middle\" data-feather=\"book\"></i> <span class=\"align-middle\">Blank</span></a></li><li class=\"sidebar-header\"> Tools &amp; Components </li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-buttons.html\"><i class=\"align-middle\" data-feather=\"square\"></i> <span class=\"align-middle\">Buttons</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-forms.html\"><i class=\"align-middle\" data-feather=\"check-square\"></i> <span class=\"align-middle\">Forms</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-cards.html\"><i class=\"align-middle\" data-feather=\"grid\"></i> <span class=\"align-middle\">Cards</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-typography.html\"><i class=\"align-middle\" data-feather=\"align-left\"></i> <span class=\"align-middle\">Typography</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"icons-feather.html\"><i class=\"align-middle\" data-feather=\"coffee\"></i> <span class=\"align-middle\">Icons</span></a></li><li class=\"sidebar-header\"> Plugins &amp; Addons </li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"charts-chartjs.html\"><i class=\"align-middle\" data-feather=\"bar-chart-2\"></i> <span class=\"align-middle\">Charts</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"maps-google.html\"><i class=\"align-middle\" data-feather=\"map\"></i> <span class=\"align-middle\">Maps</span></a></li></ul><div class=\"sidebar-cta\"><div class=\"sidebar-cta-content\"><strong class=\"d-inline-block mb-2\">Upgrade to Pro</strong><div class=\"mb-3 text-sm\"> Are you looking for more components? Check out our premium version. </div><div class=\"d-grid\"><a href=\"upgrade-to-pro.html\" class=\"btn btn-primary\">Upgrade to Pro</a></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"sidebar-content js-simplebar\"><a class=\"sidebar-brand\" href=\"index.html\"><span class=\"align-middle\">AdminKit</span></a><ul class=\"sidebar-nav\"><li class=\"sidebar-header\">Pages</li><li class=\"sidebar-item active\"><a class=\"sidebar-link\" href=\"index.html\"><i class=\"align-middle\" data-feather=\"sliders\"></i><span class=\"align-middle\">Dashboard</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-profile.html\"><i class=\"align-middle\" data-feather=\"user\"></i><span class=\"align-middle\">Profile</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-sign-in.html\"><i class=\"align-middle\" data-feather=\"log-in\"></i><span class=\"align-middle\">Sign In</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-sign-up.html\"><i class=\"align-middle\" data-feather=\"user-plus\"></i><span class=\"align-middle\">Sign Up</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"pages-blank.html\"><i class=\"align-middle\" data-feather=\"book\"></i><span class=\"align-middle\">Blank</span></a></li><li class=\"sidebar-header\">Tools &amp; Components</li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-buttons.html\"><i class=\"align-middle\" data-feather=\"square\"></i><span class=\"align-middle\">Buttons</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-forms.html\"><i class=\"align-middle\" data-feather=\"check-square\"></i><span class=\"align-middle\">Forms</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-cards.html\"><i class=\"align-middle\" data-feather=\"grid\"></i><span class=\"align-middle\">Cards</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"ui-typography.html\"><i class=\"align-middle\" data-feather=\"align-left\"></i><span class=\"align-middle\">Typography</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"icons-feather.html\"><i class=\"align-middle\" data-feather=\"coffee\"></i><span class=\"align-middle\">Icons</span></a></li><li class=\"sidebar-header\">Plugins &amp; Addons</li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"charts-chartjs.html\"><i class=\"align-middle\" data-feather=\"bar-chart-2\"></i><span class=\"align-middle\">Charts</span></a></li><li class=\"sidebar-item\"><a class=\"sidebar-link\" href=\"maps-google.html\"><i class=\"align-middle\" data-feather=\"map\"></i><span class=\"align-middle\">Maps</span></a></li></ul><div class=\"sidebar-cta\"><div class=\"sidebar-cta-content\"><strong class=\"d-inline-block mb-2\">Upgrade to Pro</strong><div class=\"mb-3 text-sm\"> Are you looking for more components? Check out our premium version. </div><div class=\"d-grid\"><a href=\"upgrade-to-pro.html\" class=\"btn btn-primary\">Upgrade to Pro</a></div></div></div></div>", 1);
 var _hoisted_3 = [_hoisted_2];
-function render(_ctx, _cache) {
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("nav", _hoisted_1, _hoisted_3);
 }
 
@@ -4248,7 +4332,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "wrapper"
 };
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"main\"><nav class=\"navbar navbar-expand navbar-light navbar-bg\"><div class=\"navbar-collapse collapse\"><ul class=\"navbar-nav navbar-align\"><li class=\"nav-item dropdown\"><a class=\"nav-icon dropdown-toggle\" href=\"#\" id=\"alertsDropdown\" data-bs-toggle=\"dropdown\"><div class=\"position-relative\"><i class=\"align-middle\" data-feather=\"bell\"></i><span class=\"indicator\">4</span></div></a><div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-end py-0\" aria-labelledby=\"alertsDropdown\"><div class=\"dropdown-menu-header\"> 4 New Notifications </div><div class=\"list-group\"><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><i class=\"text-danger\" data-feather=\"alert-circle\"></i></div><div class=\"col-10\"><div class=\"text-dark\">Update completed</div><div class=\"text-muted small mt-1\">Restart server 12 to complete the update.</div><div class=\"text-muted small mt-1\">30m ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><i class=\"text-warning\" data-feather=\"bell\"></i></div><div class=\"col-10\"><div class=\"text-dark\">Lorem ipsum</div><div class=\"text-muted small mt-1\">Aliquam ex eros, imperdiet vulputate hendrerit et.</div><div class=\"text-muted small mt-1\">2h ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><i class=\"text-primary\" data-feather=\"home\"></i></div><div class=\"col-10\"><div class=\"text-dark\">Login from 192.186.1.8</div><div class=\"text-muted small mt-1\">5h ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><i class=\"text-success\" data-feather=\"user-plus\"></i></div><div class=\"col-10\"><div class=\"text-dark\">New connection</div><div class=\"text-muted small mt-1\">Christina accepted your request. </div><div class=\"text-muted small mt-1\">14h ago</div></div></div></a></div><div class=\"dropdown-menu-footer\"><a href=\"#\" class=\"text-muted\">Show all notifications</a></div></div></li><li class=\"nav-item dropdown\"><a class=\"nav-icon dropdown-toggle\" href=\"#\" id=\"messagesDropdown\" data-bs-toggle=\"dropdown\"><div class=\"position-relative\"><i class=\"align-middle\" data-feather=\"message-square\"></i></div></a><div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-end py-0\" aria-labelledby=\"messagesDropdown\"><div class=\"dropdown-menu-header\"><div class=\"position-relative\"> 4 New Messages </div></div><div class=\"list-group\"><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><img src=\"adminkit/img/avatars/avatar-5.jpg\" class=\"avatar img-fluid rounded-circle\" alt=\"Vanessa Tucker\"></div><div class=\"col-10 ps-2\"><div class=\"text-dark\">Vanessa Tucker</div><div class=\"text-muted small mt-1\">Nam pretium turpis et arcu. Duis arcu tortor.</div><div class=\"text-muted small mt-1\">15m ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><img src=\"adminkit/img/avatars/avatar-2.jpg\" class=\"avatar img-fluid rounded-circle\" alt=\"William Harris\"></div><div class=\"col-10 ps-2\"><div class=\"text-dark\">William Harris</div><div class=\"text-muted small mt-1\">Curabitur ligula sapien euismod vitae.</div><div class=\"text-muted small mt-1\">2h ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><img src=\"adminkit/img/avatars/avatar-4.jpg\" class=\"avatar img-fluid rounded-circle\" alt=\"Christina Mason\"></div><div class=\"col-10 ps-2\"><div class=\"text-dark\">Christina Mason</div><div class=\"text-muted small mt-1\">Pellentesque auctor neque nec urna. </div><div class=\"text-muted small mt-1\">4h ago</div></div></div></a><a href=\"#\" class=\"list-group-item\"><div class=\"row g-0 align-items-center\"><div class=\"col-2\"><img src=\"adminkit/img/avatars/avatar-3.jpg\" class=\"avatar img-fluid rounded-circle\" alt=\"Sharon Lessman\"></div><div class=\"col-10 ps-2\"><div class=\"text-dark\">Sharon Lessman</div><div class=\"text-muted small mt-1\">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div><div class=\"text-muted small mt-1\">5h ago</div></div></div></a></div><div class=\"dropdown-menu-footer\"><a href=\"#\" class=\"text-muted\">Show all messages</a></div></div></li><li class=\"nav-item dropdown\"><a class=\"nav-icon dropdown-toggle d-inline-block d-sm-none\" href=\"#\" data-bs-toggle=\"dropdown\"><i class=\"align-middle\" data-feather=\"settings\"></i></a><a class=\"nav-link dropdown-toggle d-none d-sm-inline-block\" href=\"#\" data-bs-toggle=\"dropdown\"><img src=\"adminkit/img/avatars/avatar.jpg\" class=\"avatar img-fluid rounded me-1\" alt=\"Charles Hall\"> <span class=\"text-dark\">Charles Hall</span></a><div class=\"dropdown-menu dropdown-menu-end\"><a class=\"dropdown-item\" href=\"pages-profile.html\"><i class=\"align-middle me-1\" data-feather=\"user\"></i> Profile</a><a class=\"dropdown-item\" href=\"#\"><i class=\"align-middle me-1\" data-feather=\"pie-chart\"></i> Analytics</a><div class=\"dropdown-divider\"></div><a class=\"dropdown-item\" href=\"index.html\"><i class=\"align-middle me-1\" data-feather=\"settings\"></i> Settings &amp; Privacy</a><a class=\"dropdown-item\" href=\"#\"><i class=\"align-middle me-1\" data-feather=\"help-circle\"></i> Help Center</a><div class=\"dropdown-divider\"></div><a class=\"dropdown-item\" href=\"#\">Log out</a></div></li></ul></div></nav><main class=\"content\"><div class=\"container-fluid p-0\"><h1 class=\"h3 mb-3\"><strong>Analytics</strong> Dashboard</h1><div class=\"row\"><div class=\"col-xl-6 col-xxl-5 d-flex\"><div class=\"w-100\"><div class=\"row\"><div class=\"col-sm-6\"><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Sales</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"truck\"></i></div></div></div><h1 class=\"mt-1 mb-3\">2.382</h1><div class=\"mb-0\"><span class=\"text-danger\"><i class=\"mdi mdi-arrow-bottom-right\"></i> -3.65% </span><span class=\"text-muted\">Since last week</span></div></div></div><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Visitors</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"users\"></i></div></div></div><h1 class=\"mt-1 mb-3\">14.212</h1><div class=\"mb-0\"><span class=\"text-success\"><i class=\"mdi mdi-arrow-bottom-right\"></i> 5.25% </span><span class=\"text-muted\">Since last week</span></div></div></div></div><div class=\"col-sm-6\"><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Earnings</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"dollar-sign\"></i></div></div></div><h1 class=\"mt-1 mb-3\">$21.300</h1><div class=\"mb-0\"><span class=\"text-success\"><i class=\"mdi mdi-arrow-bottom-right\"></i> 6.65% </span><span class=\"text-muted\">Since last week</span></div></div></div><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Orders</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"shopping-cart\"></i></div></div></div><h1 class=\"mt-1 mb-3\">64</h1><div class=\"mb-0\"><span class=\"text-danger\"><i class=\"mdi mdi-arrow-bottom-right\"></i> -2.25% </span><span class=\"text-muted\">Since last week</span></div></div></div></div></div></div></div><div class=\"col-xl-6 col-xxl-7\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Recent Movement</h5></div><div class=\"card-body py-3\"><div class=\"chart chart-sm\"><canvas id=\"chartjs-dashboard-line\"></canvas></div></div></div></div></div><div class=\"row\"><div class=\"col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Browser Usage</h5></div><div class=\"card-body d-flex\"><div class=\"align-self-center w-100\"><div class=\"py-3\"><div class=\"chart chart-xs\"><canvas id=\"chartjs-dashboard-pie\"></canvas></div></div><table class=\"table mb-0\"><tbody><tr><td>Chrome</td><td class=\"text-end\">4306</td></tr><tr><td>Firefox</td><td class=\"text-end\">3801</td></tr><tr><td>IE</td><td class=\"text-end\">1689</td></tr></tbody></table></div></div></div></div><div class=\"col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Real-Time</h5></div><div class=\"card-body px-4\"><div id=\"world_map\" style=\"height:350px;\"></div></div></div></div><div class=\"col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1\"><div class=\"card flex-fill\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Calendar</h5></div><div class=\"card-body d-flex\"><div class=\"align-self-center w-100\"><div class=\"chart\"><div id=\"datetimepicker-dashboard\"></div></div></div></div></div></div></div><div class=\"row\"><div class=\"col-12 col-lg-8 col-xxl-9 d-flex\"><div class=\"card flex-fill\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Latest Projects</h5></div><table class=\"table table-hover my-0\"><thead><tr><th>Name</th><th class=\"d-none d-xl-table-cell\">Start Date</th><th class=\"d-none d-xl-table-cell\">End Date</th><th>Status</th><th class=\"d-none d-md-table-cell\">Assignee</th></tr></thead><tbody><tr><td>Project Apollo</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Vanessa Tucker</td></tr><tr><td>Project Fireball</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-danger\">Cancelled</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr><tr><td>Project Hades</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Sharon Lessman</td></tr><tr><td>Project Nitro</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-warning\">In progress</span></td><td class=\"d-none d-md-table-cell\">Vanessa Tucker</td></tr><tr><td>Project Phoenix</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr><tr><td>Project X</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Sharon Lessman</td></tr><tr><td>Project Romeo</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Christina Mason</td></tr><tr><td>Project Wombat</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-warning\">In progress</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr></tbody></table></div></div><div class=\"col-12 col-lg-4 col-xxl-3 d-flex\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Monthly Sales</h5></div><div class=\"card-body d-flex w-100\"><div class=\"align-self-center chart chart-lg\"><canvas id=\"chartjs-dashboard-bar\"></canvas></div></div></div></div></div></div></main><footer class=\"footer\"><div class=\"container-fluid\"><div class=\"row text-muted\"><div class=\"col-6 text-start\"><p class=\"mb-0\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\"><strong>AdminKit</strong></a> - <a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\"><strong>Bootstrap Admin Template</strong></a> © </p></div><div class=\"col-6 text-end\"><ul class=\"list-inline\"><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Support</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Help Center</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Terms</a></li></ul></div></div></div></footer></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"main\"><nav class=\"navbar navbar-expand navbar-light navbar-bg\"><a class=\"sidebar-toggle js-sidebar-toggle\"><i class=\"hamburger align-self-center\"></i></a><div class=\"navbar-collapse collapse\"><ul class=\"navbar-nav navbar-align\"><li class=\"nav-item dropdown\"><a class=\"nav-icon dropdown-toggle d-inline-block d-sm-none\" href=\"#\" data-bs-toggle=\"dropdown\"><i class=\"align-middle\" data-feather=\"settings\"></i></a><a class=\"nav-link dropdown-toggle d-none d-sm-inline-block\" href=\"#\" data-bs-toggle=\"dropdown\"><img src=\"adminkit/img/avatars/avatar.jpg\" class=\"avatar img-fluid rounded me-1\" alt=\"Charles Hall\"> <span class=\"text-dark\">Charles Hall</span></a><div class=\"dropdown-menu dropdown-menu-end\"><a class=\"dropdown-item\" href=\"pages-profile.html\"><i class=\"align-middle me-1\" data-feather=\"user\"></i> Profile</a><a class=\"dropdown-item\" href=\"#\"><i class=\"align-middle me-1\" data-feather=\"pie-chart\"></i> Analytics</a><div class=\"dropdown-divider\"></div><a class=\"dropdown-item\" href=\"index.html\"><i class=\"align-middle me-1\" data-feather=\"settings\"></i> Settings &amp; Privacy</a><a class=\"dropdown-item\" href=\"#\"><i class=\"align-middle me-1\" data-feather=\"help-circle\"></i> Help Center</a><div class=\"dropdown-divider\"></div><a class=\"dropdown-item\" href=\"#\">Log out</a></div></li></ul></div></nav><main class=\"content\"><div class=\"container-fluid p-0\"><h1 class=\"h3 mb-3\"><strong>Analytics</strong> Dashboard</h1><div class=\"row\"><div class=\"col-xl-6 col-xxl-5 d-flex\"><div class=\"w-100\"><div class=\"row\"><div class=\"col-sm-6\"><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Sales</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"truck\"></i></div></div></div><h1 class=\"mt-1 mb-3\">2.382</h1><div class=\"mb-0\"><span class=\"text-danger\"><i class=\"mdi mdi-arrow-bottom-right\"></i> -3.65% </span><span class=\"text-muted\">Since last week</span></div></div></div><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Visitors</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"users\"></i></div></div></div><h1 class=\"mt-1 mb-3\">14.212</h1><div class=\"mb-0\"><span class=\"text-success\"><i class=\"mdi mdi-arrow-bottom-right\"></i> 5.25% </span><span class=\"text-muted\">Since last week</span></div></div></div></div><div class=\"col-sm-6\"><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Earnings</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"dollar-sign\"></i></div></div></div><h1 class=\"mt-1 mb-3\">$21.300</h1><div class=\"mb-0\"><span class=\"text-success\"><i class=\"mdi mdi-arrow-bottom-right\"></i> 6.65% </span><span class=\"text-muted\">Since last week</span></div></div></div><div class=\"card\"><div class=\"card-body\"><div class=\"row\"><div class=\"col mt-0\"><h5 class=\"card-title\">Orders</h5></div><div class=\"col-auto\"><div class=\"stat text-primary\"><i class=\"align-middle\" data-feather=\"shopping-cart\"></i></div></div></div><h1 class=\"mt-1 mb-3\">64</h1><div class=\"mb-0\"><span class=\"text-danger\"><i class=\"mdi mdi-arrow-bottom-right\"></i> -2.25% </span><span class=\"text-muted\">Since last week</span></div></div></div></div></div></div></div><div class=\"col-xl-6 col-xxl-7\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Recent Movement</h5></div><div class=\"card-body py-3\"><div class=\"chart chart-sm\"><canvas id=\"chartjs-dashboard-line\"></canvas></div></div></div></div></div><div class=\"row\"><div class=\"col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Browser Usage</h5></div><div class=\"card-body d-flex\"><div class=\"align-self-center w-100\"><div class=\"py-3\"><div class=\"chart chart-xs\"><canvas id=\"chartjs-dashboard-pie\"></canvas></div></div><table class=\"table mb-0\"><tbody><tr><td>Chrome</td><td class=\"text-end\">4306</td></tr><tr><td>Firefox</td><td class=\"text-end\">3801</td></tr><tr><td>IE</td><td class=\"text-end\">1689</td></tr></tbody></table></div></div></div></div><div class=\"col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Real-Time</h5></div><div class=\"card-body px-4\"><div id=\"world_map\" style=\"height:350px;\"></div></div></div></div><div class=\"col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1\"><div class=\"card flex-fill\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Calendar</h5></div><div class=\"card-body d-flex\"><div class=\"align-self-center w-100\"><div class=\"chart\"><div id=\"datetimepicker-dashboard\"></div></div></div></div></div></div></div><div class=\"row\"><div class=\"col-12 col-lg-8 col-xxl-9 d-flex\"><div class=\"card flex-fill\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Latest Projects</h5></div><table class=\"table table-hover my-0\"><thead><tr><th>Name</th><th class=\"d-none d-xl-table-cell\">Start Date</th><th class=\"d-none d-xl-table-cell\">End Date</th><th>Status</th><th class=\"d-none d-md-table-cell\">Assignee</th></tr></thead><tbody><tr><td>Project Apollo</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Vanessa Tucker</td></tr><tr><td>Project Fireball</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-danger\">Cancelled</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr><tr><td>Project Hades</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Sharon Lessman</td></tr><tr><td>Project Nitro</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-warning\">In progress</span></td><td class=\"d-none d-md-table-cell\">Vanessa Tucker</td></tr><tr><td>Project Phoenix</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr><tr><td>Project X</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Sharon Lessman</td></tr><tr><td>Project Romeo</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-success\">Done</span></td><td class=\"d-none d-md-table-cell\">Christina Mason</td></tr><tr><td>Project Wombat</td><td class=\"d-none d-xl-table-cell\">01/01/2021</td><td class=\"d-none d-xl-table-cell\">31/06/2021</td><td><span class=\"badge bg-warning\">In progress</span></td><td class=\"d-none d-md-table-cell\">William Harris</td></tr></tbody></table></div></div><div class=\"col-12 col-lg-4 col-xxl-3 d-flex\"><div class=\"card flex-fill w-100\"><div class=\"card-header\"><h5 class=\"card-title mb-0\">Monthly Sales</h5></div><div class=\"card-body d-flex w-100\"><div class=\"align-self-center chart chart-lg\"><canvas id=\"chartjs-dashboard-bar\"></canvas></div></div></div></div></div></div></main><footer class=\"footer\"><div class=\"container-fluid\"><div class=\"row text-muted\"><div class=\"col-6 text-start\"><p class=\"mb-0\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\"><strong>AdminKit</strong></a> - <a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\"><strong>Bootstrap Admin Template</strong></a> © </p></div><div class=\"col-6 text-end\"><ul class=\"list-inline\"><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Support</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Help Center</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a class=\"text-muted\" href=\"https://adminkit.io/\" target=\"_blank\">Terms</a></li></ul></div></div></div></footer></div>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Sidebar"]), _hoisted_2]);
 }
@@ -4265,17 +4349,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/app.scss */ "./resources/adminkit/scss/app.scss");
 /* harmony import */ var _modules_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/bootstrap */ "./resources/adminkit/js/modules/bootstrap.js");
-/* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sidebar */ "./resources/adminkit/js/modules/sidebar.js");
-/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/theme */ "./resources/adminkit/js/modules/theme.js");
-/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_theme__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_feather__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/feather */ "./resources/adminkit/js/modules/feather.js");
-/* harmony import */ var _modules_chartjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/chartjs */ "./resources/adminkit/js/modules/chartjs.js");
-/* harmony import */ var _modules_flatpickr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/flatpickr */ "./resources/adminkit/js/modules/flatpickr.js");
-/* harmony import */ var _modules_vector_maps__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/vector-maps */ "./resources/adminkit/js/modules/vector-maps.js");
+/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/theme */ "./resources/adminkit/js/modules/theme.js");
+/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_theme__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_feather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/feather */ "./resources/adminkit/js/modules/feather.js");
+/* harmony import */ var _modules_chartjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/chartjs */ "./resources/adminkit/js/modules/chartjs.js");
+/* harmony import */ var _modules_flatpickr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/flatpickr */ "./resources/adminkit/js/modules/flatpickr.js");
+/* harmony import */ var _modules_vector_maps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/vector-maps */ "./resources/adminkit/js/modules/vector-maps.js");
 
 
 // AdminKit (required)
-
 
 
 
@@ -4358,58 +4440,6 @@ __webpack_require__.r(__webpack_exports__);
 // Usage: https://flatpickr.js.org/
 
 window.flatpickr = flatpickr__WEBPACK_IMPORTED_MODULE_0__["default"];
-
-/***/ }),
-
-/***/ "./resources/adminkit/js/modules/sidebar.js":
-/*!**************************************************!*\
-  !*** ./resources/adminkit/js/modules/sidebar.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
-// Usage: https://github.com/Grsmto/simplebar
-
-var initialize = function initialize() {
-  initializeSimplebar();
-  initializeSidebarCollapse();
-};
-var initializeSimplebar = function initializeSimplebar() {
-  var simplebarElement = document.getElementsByClassName("js-simplebar")[0];
-  if (simplebarElement) {
-    var simplebarInstance = new simplebar__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementsByClassName("js-simplebar")[0]);
-
-    /* Recalculate simplebar on sidebar dropdown toggle */
-    var sidebarDropdowns = document.querySelectorAll(".js-sidebar [data-bs-parent]");
-    sidebarDropdowns.forEach(function (link) {
-      link.addEventListener("shown.bs.collapse", function () {
-        simplebarInstance.recalculate();
-      });
-      link.addEventListener("hidden.bs.collapse", function () {
-        simplebarInstance.recalculate();
-      });
-    });
-  }
-};
-var initializeSidebarCollapse = function initializeSidebarCollapse() {
-  var sidebarElement = document.getElementsByClassName("js-sidebar")[0];
-  var sidebarToggleElement = document.getElementsByClassName("js-sidebar-toggle")[0];
-  if (sidebarElement && sidebarToggleElement) {
-    sidebarToggleElement.addEventListener("click", function () {
-      sidebarElement.classList.toggle("collapsed");
-      sidebarElement.addEventListener("transitionend", function () {
-        window.dispatchEvent(new Event("resize"));
-      });
-    });
-  }
-};
-
-// Wait until page is loaded
-document.addEventListener("DOMContentLoaded", function () {
-  return initialize();
-});
 
 /***/ }),
 
@@ -60018,12 +60048,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Sidebar_vue_vue_type_template_id_5dadd525__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Sidebar.vue?vue&type=template&id=5dadd525 */ "./resources/components/adminkit/Sidebar.vue?vue&type=template&id=5dadd525");
-/* harmony import */ var C_laragon_www_kin_dashboard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Sidebar_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar.vue?vue&type=script&setup=true&lang=js */ "./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js");
+/* harmony import */ var C_laragon_www_kin_dashboard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
-const script = {}
+
+
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_kin_dashboard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Sidebar_vue_vue_type_template_id_5dadd525__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/adminkit/Sidebar.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_kin_dashboard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Sidebar_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Sidebar_vue_vue_type_template_id_5dadd525__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/adminkit/Sidebar.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60057,6 +60089,22 @@ if (false) {}
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js":
+/*!**************************************************************************************!*\
+  !*** ./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Sidebar_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Sidebar_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Sidebar.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/components/adminkit/Sidebar.vue?vue&type=script&setup=true&lang=js");
+ 
 
 /***/ }),
 
@@ -60104,6 +60152,1964 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_template_id_362493c3__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_template_id_362493c3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Index.vue?vue&type=template&id=362493c3 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/views/adminkit/Index.vue?vue&type=template&id=362493c3");
+
+
+/***/ }),
+
+/***/ "./node_modules/@iconify/vue/dist/iconify.mjs":
+/*!****************************************************!*\
+  !*** ./node_modules/@iconify/vue/dist/iconify.mjs ***!
+  \****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Icon": () => (/* binding */ Icon),
+/* harmony export */   "_api": () => (/* binding */ _api),
+/* harmony export */   "addAPIProvider": () => (/* binding */ addAPIProvider),
+/* harmony export */   "addCollection": () => (/* binding */ addCollection),
+/* harmony export */   "addIcon": () => (/* binding */ addIcon),
+/* harmony export */   "buildIcon": () => (/* binding */ iconToSVG),
+/* harmony export */   "calculateSize": () => (/* binding */ calculateSize),
+/* harmony export */   "disableCache": () => (/* binding */ disableCache),
+/* harmony export */   "enableCache": () => (/* binding */ enableCache),
+/* harmony export */   "getIcon": () => (/* binding */ getIcon),
+/* harmony export */   "iconExists": () => (/* binding */ iconExists),
+/* harmony export */   "listIcons": () => (/* binding */ listIcons),
+/* harmony export */   "loadIcon": () => (/* binding */ loadIcon),
+/* harmony export */   "loadIcons": () => (/* binding */ loadIcons),
+/* harmony export */   "replaceIDs": () => (/* binding */ replaceIDs)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const stringToIcon = (value, validate, allowSimpleName, provider = "") => {
+  const colonSeparated = value.split(":");
+  if (value.slice(0, 1) === "@") {
+    if (colonSeparated.length < 2 || colonSeparated.length > 3) {
+      return null;
+    }
+    provider = colonSeparated.shift().slice(1);
+  }
+  if (colonSeparated.length > 3 || !colonSeparated.length) {
+    return null;
+  }
+  if (colonSeparated.length > 1) {
+    const name2 = colonSeparated.pop();
+    const prefix = colonSeparated.pop();
+    const result = {
+      provider: colonSeparated.length > 0 ? colonSeparated[0] : provider,
+      prefix,
+      name: name2
+    };
+    return validate && !validateIconName(result) ? null : result;
+  }
+  const name = colonSeparated[0];
+  const dashSeparated = name.split("-");
+  if (dashSeparated.length > 1) {
+    const result = {
+      provider,
+      prefix: dashSeparated.shift(),
+      name: dashSeparated.join("-")
+    };
+    return validate && !validateIconName(result) ? null : result;
+  }
+  if (allowSimpleName && provider === "") {
+    const result = {
+      provider,
+      prefix: "",
+      name
+    };
+    return validate && !validateIconName(result, allowSimpleName) ? null : result;
+  }
+  return null;
+};
+const validateIconName = (icon, allowSimpleName) => {
+  if (!icon) {
+    return false;
+  }
+  return !!((icon.provider === "" || icon.provider.match(matchIconName)) && (allowSimpleName && icon.prefix === "" || icon.prefix.match(matchIconName)) && icon.name.match(matchIconName));
+};
+
+const defaultIconDimensions = Object.freeze(
+  {
+    left: 0,
+    top: 0,
+    width: 16,
+    height: 16
+  }
+);
+const defaultIconTransformations = Object.freeze({
+  rotate: 0,
+  vFlip: false,
+  hFlip: false
+});
+const defaultIconProps = Object.freeze({
+  ...defaultIconDimensions,
+  ...defaultIconTransformations
+});
+const defaultExtendedIconProps = Object.freeze({
+  ...defaultIconProps,
+  body: "",
+  hidden: false
+});
+
+function mergeIconTransformations(obj1, obj2) {
+  const result = {};
+  if (!obj1.hFlip !== !obj2.hFlip) {
+    result.hFlip = true;
+  }
+  if (!obj1.vFlip !== !obj2.vFlip) {
+    result.vFlip = true;
+  }
+  const rotate = ((obj1.rotate || 0) + (obj2.rotate || 0)) % 4;
+  if (rotate) {
+    result.rotate = rotate;
+  }
+  return result;
+}
+
+function mergeIconData(parent, child) {
+  const result = mergeIconTransformations(parent, child);
+  for (const key in defaultExtendedIconProps) {
+    if (key in defaultIconTransformations) {
+      if (key in parent && !(key in result)) {
+        result[key] = defaultIconTransformations[key];
+      }
+    } else if (key in child) {
+      result[key] = child[key];
+    } else if (key in parent) {
+      result[key] = parent[key];
+    }
+  }
+  return result;
+}
+
+function getIconsTree(data, names) {
+  const icons = data.icons;
+  const aliases = data.aliases || {};
+  const resolved = /* @__PURE__ */ Object.create(null);
+  function resolve(name) {
+    if (icons[name]) {
+      return resolved[name] = [];
+    }
+    if (!(name in resolved)) {
+      resolved[name] = null;
+      const parent = aliases[name] && aliases[name].parent;
+      const value = parent && resolve(parent);
+      if (value) {
+        resolved[name] = [parent].concat(value);
+      }
+    }
+    return resolved[name];
+  }
+  (names || Object.keys(icons).concat(Object.keys(aliases))).forEach(resolve);
+  return resolved;
+}
+
+function internalGetIconData(data, name, tree) {
+  const icons = data.icons;
+  const aliases = data.aliases || {};
+  let currentProps = {};
+  function parse(name2) {
+    currentProps = mergeIconData(
+      icons[name2] || aliases[name2],
+      currentProps
+    );
+  }
+  parse(name);
+  tree.forEach(parse);
+  return mergeIconData(data, currentProps);
+}
+
+function parseIconSet(data, callback) {
+  const names = [];
+  if (typeof data !== "object" || typeof data.icons !== "object") {
+    return names;
+  }
+  if (data.not_found instanceof Array) {
+    data.not_found.forEach((name) => {
+      callback(name, null);
+      names.push(name);
+    });
+  }
+  const tree = getIconsTree(data);
+  for (const name in tree) {
+    const item = tree[name];
+    if (item) {
+      callback(name, internalGetIconData(data, name, item));
+      names.push(name);
+    }
+  }
+  return names;
+}
+
+const optionalPropertyDefaults = {
+  provider: "",
+  aliases: {},
+  not_found: {},
+  ...defaultIconDimensions
+};
+function checkOptionalProps(item, defaults) {
+  for (const prop in defaults) {
+    if (prop in item && typeof item[prop] !== typeof defaults[prop]) {
+      return false;
+    }
+  }
+  return true;
+}
+function quicklyValidateIconSet(obj) {
+  if (typeof obj !== "object" || obj === null) {
+    return null;
+  }
+  const data = obj;
+  if (typeof data.prefix !== "string" || !obj.icons || typeof obj.icons !== "object") {
+    return null;
+  }
+  if (!checkOptionalProps(obj, optionalPropertyDefaults)) {
+    return null;
+  }
+  const icons = data.icons;
+  for (const name in icons) {
+    const icon = icons[name];
+    if (!name.match(matchIconName) || typeof icon.body !== "string" || !checkOptionalProps(
+      icon,
+      defaultExtendedIconProps
+    )) {
+      return null;
+    }
+  }
+  const aliases = data.aliases || {};
+  for (const name in aliases) {
+    const icon = aliases[name];
+    const parent = icon.parent;
+    if (!name.match(matchIconName) || typeof parent !== "string" || !icons[parent] && !aliases[parent] || !checkOptionalProps(
+      icon,
+      defaultExtendedIconProps
+    )) {
+      return null;
+    }
+  }
+  return data;
+}
+
+const dataStorage = /* @__PURE__ */ Object.create(null);
+function newStorage(provider, prefix) {
+  return {
+    provider,
+    prefix,
+    icons: /* @__PURE__ */ Object.create(null),
+    missing: /* @__PURE__ */ new Set()
+  };
+}
+function getStorage(provider, prefix) {
+  const providerStorage = dataStorage[provider] || (dataStorage[provider] = /* @__PURE__ */ Object.create(null));
+  return providerStorage[prefix] || (providerStorage[prefix] = newStorage(provider, prefix));
+}
+function addIconSet(storage, data) {
+  if (!quicklyValidateIconSet(data)) {
+    return [];
+  }
+  return parseIconSet(data, (name, icon) => {
+    if (icon) {
+      storage.icons[name] = icon;
+    } else {
+      storage.missing.add(name);
+    }
+  });
+}
+function addIconToStorage(storage, name, icon) {
+  try {
+    if (typeof icon.body === "string") {
+      storage.icons[name] = { ...icon };
+      return true;
+    }
+  } catch (err) {
+  }
+  return false;
+}
+function listIcons(provider, prefix) {
+  let allIcons = [];
+  const providers = typeof provider === "string" ? [provider] : Object.keys(dataStorage);
+  providers.forEach((provider2) => {
+    const prefixes = typeof provider2 === "string" && typeof prefix === "string" ? [prefix] : Object.keys(dataStorage[provider2] || {});
+    prefixes.forEach((prefix2) => {
+      const storage = getStorage(provider2, prefix2);
+      allIcons = allIcons.concat(
+        Object.keys(storage.icons).map(
+          (name) => (provider2 !== "" ? "@" + provider2 + ":" : "") + prefix2 + ":" + name
+        )
+      );
+    });
+  });
+  return allIcons;
+}
+
+let simpleNames = false;
+function allowSimpleNames(allow) {
+  if (typeof allow === "boolean") {
+    simpleNames = allow;
+  }
+  return simpleNames;
+}
+function getIconData(name) {
+  const icon = typeof name === "string" ? stringToIcon(name, true, simpleNames) : name;
+  if (icon) {
+    const storage = getStorage(icon.provider, icon.prefix);
+    const iconName = icon.name;
+    return storage.icons[iconName] || (storage.missing.has(iconName) ? null : void 0);
+  }
+}
+function addIcon(name, data) {
+  const icon = stringToIcon(name, true, simpleNames);
+  if (!icon) {
+    return false;
+  }
+  const storage = getStorage(icon.provider, icon.prefix);
+  return addIconToStorage(storage, icon.name, data);
+}
+function addCollection(data, provider) {
+  if (typeof data !== "object") {
+    return false;
+  }
+  if (typeof provider !== "string") {
+    provider = data.provider || "";
+  }
+  if (simpleNames && !provider && !data.prefix) {
+    let added = false;
+    if (quicklyValidateIconSet(data)) {
+      data.prefix = "";
+      parseIconSet(data, (name, icon) => {
+        if (icon && addIcon(name, icon)) {
+          added = true;
+        }
+      });
+    }
+    return added;
+  }
+  const prefix = data.prefix;
+  if (!validateIconName({
+    provider,
+    prefix,
+    name: "a"
+  })) {
+    return false;
+  }
+  const storage = getStorage(provider, prefix);
+  return !!addIconSet(storage, data);
+}
+function iconExists(name) {
+  return !!getIconData(name);
+}
+function getIcon(name) {
+  const result = getIconData(name);
+  return result ? {
+    ...defaultIconProps,
+    ...result
+  } : null;
+}
+
+const defaultIconSizeCustomisations = Object.freeze({
+  width: null,
+  height: null
+});
+const defaultIconCustomisations = Object.freeze({
+  ...defaultIconSizeCustomisations,
+  ...defaultIconTransformations
+});
+
+const unitsSplit = /(-?[0-9.]*[0-9]+[0-9.]*)/g;
+const unitsTest = /^-?[0-9.]*[0-9]+[0-9.]*$/g;
+function calculateSize(size, ratio, precision) {
+  if (ratio === 1) {
+    return size;
+  }
+  precision = precision || 100;
+  if (typeof size === "number") {
+    return Math.ceil(size * ratio * precision) / precision;
+  }
+  if (typeof size !== "string") {
+    return size;
+  }
+  const oldParts = size.split(unitsSplit);
+  if (oldParts === null || !oldParts.length) {
+    return size;
+  }
+  const newParts = [];
+  let code = oldParts.shift();
+  let isNumber = unitsTest.test(code);
+  while (true) {
+    if (isNumber) {
+      const num = parseFloat(code);
+      if (isNaN(num)) {
+        newParts.push(code);
+      } else {
+        newParts.push(Math.ceil(num * ratio * precision) / precision);
+      }
+    } else {
+      newParts.push(code);
+    }
+    code = oldParts.shift();
+    if (code === void 0) {
+      return newParts.join("");
+    }
+    isNumber = !isNumber;
+  }
+}
+
+function iconToSVG(icon, customisations) {
+  const fullIcon = {
+    ...defaultIconProps,
+    ...icon
+  };
+  const fullCustomisations = {
+    ...defaultIconCustomisations,
+    ...customisations
+  };
+  const box = {
+    left: fullIcon.left,
+    top: fullIcon.top,
+    width: fullIcon.width,
+    height: fullIcon.height
+  };
+  let body = fullIcon.body;
+  [fullIcon, fullCustomisations].forEach((props) => {
+    const transformations = [];
+    const hFlip = props.hFlip;
+    const vFlip = props.vFlip;
+    let rotation = props.rotate;
+    if (hFlip) {
+      if (vFlip) {
+        rotation += 2;
+      } else {
+        transformations.push(
+          "translate(" + (box.width + box.left).toString() + " " + (0 - box.top).toString() + ")"
+        );
+        transformations.push("scale(-1 1)");
+        box.top = box.left = 0;
+      }
+    } else if (vFlip) {
+      transformations.push(
+        "translate(" + (0 - box.left).toString() + " " + (box.height + box.top).toString() + ")"
+      );
+      transformations.push("scale(1 -1)");
+      box.top = box.left = 0;
+    }
+    let tempValue;
+    if (rotation < 0) {
+      rotation -= Math.floor(rotation / 4) * 4;
+    }
+    rotation = rotation % 4;
+    switch (rotation) {
+      case 1:
+        tempValue = box.height / 2 + box.top;
+        transformations.unshift(
+          "rotate(90 " + tempValue.toString() + " " + tempValue.toString() + ")"
+        );
+        break;
+      case 2:
+        transformations.unshift(
+          "rotate(180 " + (box.width / 2 + box.left).toString() + " " + (box.height / 2 + box.top).toString() + ")"
+        );
+        break;
+      case 3:
+        tempValue = box.width / 2 + box.left;
+        transformations.unshift(
+          "rotate(-90 " + tempValue.toString() + " " + tempValue.toString() + ")"
+        );
+        break;
+    }
+    if (rotation % 2 === 1) {
+      if (box.left !== box.top) {
+        tempValue = box.left;
+        box.left = box.top;
+        box.top = tempValue;
+      }
+      if (box.width !== box.height) {
+        tempValue = box.width;
+        box.width = box.height;
+        box.height = tempValue;
+      }
+    }
+    if (transformations.length) {
+      body = '<g transform="' + transformations.join(" ") + '">' + body + "</g>";
+    }
+  });
+  const customisationsWidth = fullCustomisations.width;
+  const customisationsHeight = fullCustomisations.height;
+  const boxWidth = box.width;
+  const boxHeight = box.height;
+  let width;
+  let height;
+  if (customisationsWidth === null) {
+    height = customisationsHeight === null ? "1em" : customisationsHeight === "auto" ? boxHeight : customisationsHeight;
+    width = calculateSize(height, boxWidth / boxHeight);
+  } else {
+    width = customisationsWidth === "auto" ? boxWidth : customisationsWidth;
+    height = customisationsHeight === null ? calculateSize(width, boxHeight / boxWidth) : customisationsHeight === "auto" ? boxHeight : customisationsHeight;
+  }
+  const result = {
+    attributes: {
+      width: width.toString(),
+      height: height.toString(),
+      viewBox: box.left.toString() + " " + box.top.toString() + " " + boxWidth.toString() + " " + boxHeight.toString()
+    },
+    body
+  };
+  return result;
+}
+
+const regex = /\sid="(\S+)"/g;
+const randomPrefix = "IconifyId" + Date.now().toString(16) + (Math.random() * 16777216 | 0).toString(16);
+let counter = 0;
+function replaceIDs(body, prefix = randomPrefix) {
+  const ids = [];
+  let match;
+  while (match = regex.exec(body)) {
+    ids.push(match[1]);
+  }
+  if (!ids.length) {
+    return body;
+  }
+  ids.forEach((id) => {
+    const newID = typeof prefix === "function" ? prefix(id) : prefix + (counter++).toString();
+    const escapedID = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    body = body.replace(
+      new RegExp('([#;"])(' + escapedID + ')([")]|\\.[a-z])', "g"),
+      "$1" + newID + "$3"
+    );
+  });
+  return body;
+}
+
+const storage = /* @__PURE__ */ Object.create(null);
+function setAPIModule(provider, item) {
+  storage[provider] = item;
+}
+function getAPIModule(provider) {
+  return storage[provider] || storage[""];
+}
+
+function createAPIConfig(source) {
+  let resources;
+  if (typeof source.resources === "string") {
+    resources = [source.resources];
+  } else {
+    resources = source.resources;
+    if (!(resources instanceof Array) || !resources.length) {
+      return null;
+    }
+  }
+  const result = {
+    resources,
+    path: source.path || "/",
+    maxURL: source.maxURL || 500,
+    rotate: source.rotate || 750,
+    timeout: source.timeout || 5e3,
+    random: source.random === true,
+    index: source.index || 0,
+    dataAfterTimeout: source.dataAfterTimeout !== false
+  };
+  return result;
+}
+const configStorage = /* @__PURE__ */ Object.create(null);
+const fallBackAPISources = [
+  "https://api.simplesvg.com",
+  "https://api.unisvg.com"
+];
+const fallBackAPI = [];
+while (fallBackAPISources.length > 0) {
+  if (fallBackAPISources.length === 1) {
+    fallBackAPI.push(fallBackAPISources.shift());
+  } else {
+    if (Math.random() > 0.5) {
+      fallBackAPI.push(fallBackAPISources.shift());
+    } else {
+      fallBackAPI.push(fallBackAPISources.pop());
+    }
+  }
+}
+configStorage[""] = createAPIConfig({
+  resources: ["https://api.iconify.design"].concat(fallBackAPI)
+});
+function addAPIProvider(provider, customConfig) {
+  const config = createAPIConfig(customConfig);
+  if (config === null) {
+    return false;
+  }
+  configStorage[provider] = config;
+  return true;
+}
+function getAPIConfig(provider) {
+  return configStorage[provider];
+}
+function listAPIProviders() {
+  return Object.keys(configStorage);
+}
+
+const detectFetch = () => {
+  let callback;
+  try {
+    callback = fetch;
+    if (typeof callback === "function") {
+      return callback;
+    }
+  } catch (err) {
+  }
+};
+let fetchModule = detectFetch();
+function setFetch(fetch2) {
+  fetchModule = fetch2;
+}
+function getFetch() {
+  return fetchModule;
+}
+function calculateMaxLength(provider, prefix) {
+  const config = getAPIConfig(provider);
+  if (!config) {
+    return 0;
+  }
+  let result;
+  if (!config.maxURL) {
+    result = 0;
+  } else {
+    let maxHostLength = 0;
+    config.resources.forEach((item) => {
+      const host = item;
+      maxHostLength = Math.max(maxHostLength, host.length);
+    });
+    const url = prefix + ".json?icons=";
+    result = config.maxURL - maxHostLength - config.path.length - url.length;
+  }
+  return result;
+}
+function shouldAbort(status) {
+  return status === 404;
+}
+const prepare = (provider, prefix, icons) => {
+  const results = [];
+  const maxLength = calculateMaxLength(provider, prefix);
+  const type = "icons";
+  let item = {
+    type,
+    provider,
+    prefix,
+    icons: []
+  };
+  let length = 0;
+  icons.forEach((name, index) => {
+    length += name.length + 1;
+    if (length >= maxLength && index > 0) {
+      results.push(item);
+      item = {
+        type,
+        provider,
+        prefix,
+        icons: []
+      };
+      length = name.length;
+    }
+    item.icons.push(name);
+  });
+  results.push(item);
+  return results;
+};
+function getPath(provider) {
+  if (typeof provider === "string") {
+    const config = getAPIConfig(provider);
+    if (config) {
+      return config.path;
+    }
+  }
+  return "/";
+}
+const send = (host, params, callback) => {
+  if (!fetchModule) {
+    callback("abort", 424);
+    return;
+  }
+  let path = getPath(params.provider);
+  switch (params.type) {
+    case "icons": {
+      const prefix = params.prefix;
+      const icons = params.icons;
+      const iconsList = icons.join(",");
+      const urlParams = new URLSearchParams({
+        icons: iconsList
+      });
+      path += prefix + ".json?" + urlParams.toString();
+      break;
+    }
+    case "custom": {
+      const uri = params.uri;
+      path += uri.slice(0, 1) === "/" ? uri.slice(1) : uri;
+      break;
+    }
+    default:
+      callback("abort", 400);
+      return;
+  }
+  let defaultError = 503;
+  fetchModule(host + path).then((response) => {
+    const status = response.status;
+    if (status !== 200) {
+      setTimeout(() => {
+        callback(shouldAbort(status) ? "abort" : "next", status);
+      });
+      return;
+    }
+    defaultError = 501;
+    return response.json();
+  }).then((data) => {
+    if (typeof data !== "object" || data === null) {
+      setTimeout(() => {
+        callback("next", defaultError);
+      });
+      return;
+    }
+    setTimeout(() => {
+      callback("success", data);
+    });
+  }).catch(() => {
+    callback("next", defaultError);
+  });
+};
+const fetchAPIModule = {
+  prepare,
+  send
+};
+
+function sortIcons(icons) {
+  const result = {
+    loaded: [],
+    missing: [],
+    pending: []
+  };
+  const storage = /* @__PURE__ */ Object.create(null);
+  icons.sort((a, b) => {
+    if (a.provider !== b.provider) {
+      return a.provider.localeCompare(b.provider);
+    }
+    if (a.prefix !== b.prefix) {
+      return a.prefix.localeCompare(b.prefix);
+    }
+    return a.name.localeCompare(b.name);
+  });
+  let lastIcon = {
+    provider: "",
+    prefix: "",
+    name: ""
+  };
+  icons.forEach((icon) => {
+    if (lastIcon.name === icon.name && lastIcon.prefix === icon.prefix && lastIcon.provider === icon.provider) {
+      return;
+    }
+    lastIcon = icon;
+    const provider = icon.provider;
+    const prefix = icon.prefix;
+    const name = icon.name;
+    const providerStorage = storage[provider] || (storage[provider] = /* @__PURE__ */ Object.create(null));
+    const localStorage = providerStorage[prefix] || (providerStorage[prefix] = getStorage(provider, prefix));
+    let list;
+    if (name in localStorage.icons) {
+      list = result.loaded;
+    } else if (prefix === "" || localStorage.missing.has(name)) {
+      list = result.missing;
+    } else {
+      list = result.pending;
+    }
+    const item = {
+      provider,
+      prefix,
+      name
+    };
+    list.push(item);
+  });
+  return result;
+}
+
+function removeCallback(storages, id) {
+  storages.forEach((storage) => {
+    const items = storage.loaderCallbacks;
+    if (items) {
+      storage.loaderCallbacks = items.filter((row) => row.id !== id);
+    }
+  });
+}
+function updateCallbacks(storage) {
+  if (!storage.pendingCallbacksFlag) {
+    storage.pendingCallbacksFlag = true;
+    setTimeout(() => {
+      storage.pendingCallbacksFlag = false;
+      const items = storage.loaderCallbacks ? storage.loaderCallbacks.slice(0) : [];
+      if (!items.length) {
+        return;
+      }
+      let hasPending = false;
+      const provider = storage.provider;
+      const prefix = storage.prefix;
+      items.forEach((item) => {
+        const icons = item.icons;
+        const oldLength = icons.pending.length;
+        icons.pending = icons.pending.filter((icon) => {
+          if (icon.prefix !== prefix) {
+            return true;
+          }
+          const name = icon.name;
+          if (storage.icons[name]) {
+            icons.loaded.push({
+              provider,
+              prefix,
+              name
+            });
+          } else if (storage.missing.has(name)) {
+            icons.missing.push({
+              provider,
+              prefix,
+              name
+            });
+          } else {
+            hasPending = true;
+            return true;
+          }
+          return false;
+        });
+        if (icons.pending.length !== oldLength) {
+          if (!hasPending) {
+            removeCallback([storage], item.id);
+          }
+          item.callback(
+            icons.loaded.slice(0),
+            icons.missing.slice(0),
+            icons.pending.slice(0),
+            item.abort
+          );
+        }
+      });
+    });
+  }
+}
+let idCounter = 0;
+function storeCallback(callback, icons, pendingSources) {
+  const id = idCounter++;
+  const abort = removeCallback.bind(null, pendingSources, id);
+  if (!icons.pending.length) {
+    return abort;
+  }
+  const item = {
+    id,
+    icons,
+    callback,
+    abort
+  };
+  pendingSources.forEach((storage) => {
+    (storage.loaderCallbacks || (storage.loaderCallbacks = [])).push(item);
+  });
+  return abort;
+}
+
+function listToIcons(list, validate = true, simpleNames = false) {
+  const result = [];
+  list.forEach((item) => {
+    const icon = typeof item === "string" ? stringToIcon(item, validate, simpleNames) : item;
+    if (icon) {
+      result.push(icon);
+    }
+  });
+  return result;
+}
+
+// src/config.ts
+var defaultConfig = {
+  resources: [],
+  index: 0,
+  timeout: 2e3,
+  rotate: 750,
+  random: false,
+  dataAfterTimeout: false
+};
+
+// src/query.ts
+function sendQuery(config, payload, query, done) {
+  const resourcesCount = config.resources.length;
+  const startIndex = config.random ? Math.floor(Math.random() * resourcesCount) : config.index;
+  let resources;
+  if (config.random) {
+    let list = config.resources.slice(0);
+    resources = [];
+    while (list.length > 1) {
+      const nextIndex = Math.floor(Math.random() * list.length);
+      resources.push(list[nextIndex]);
+      list = list.slice(0, nextIndex).concat(list.slice(nextIndex + 1));
+    }
+    resources = resources.concat(list);
+  } else {
+    resources = config.resources.slice(startIndex).concat(config.resources.slice(0, startIndex));
+  }
+  const startTime = Date.now();
+  let status = "pending";
+  let queriesSent = 0;
+  let lastError;
+  let timer = null;
+  let queue = [];
+  let doneCallbacks = [];
+  if (typeof done === "function") {
+    doneCallbacks.push(done);
+  }
+  function resetTimer() {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  }
+  function abort() {
+    if (status === "pending") {
+      status = "aborted";
+    }
+    resetTimer();
+    queue.forEach((item) => {
+      if (item.status === "pending") {
+        item.status = "aborted";
+      }
+    });
+    queue = [];
+  }
+  function subscribe(callback, overwrite) {
+    if (overwrite) {
+      doneCallbacks = [];
+    }
+    if (typeof callback === "function") {
+      doneCallbacks.push(callback);
+    }
+  }
+  function getQueryStatus() {
+    return {
+      startTime,
+      payload,
+      status,
+      queriesSent,
+      queriesPending: queue.length,
+      subscribe,
+      abort
+    };
+  }
+  function failQuery() {
+    status = "failed";
+    doneCallbacks.forEach((callback) => {
+      callback(void 0, lastError);
+    });
+  }
+  function clearQueue() {
+    queue.forEach((item) => {
+      if (item.status === "pending") {
+        item.status = "aborted";
+      }
+    });
+    queue = [];
+  }
+  function moduleResponse(item, response, data) {
+    const isError = response !== "success";
+    queue = queue.filter((queued) => queued !== item);
+    switch (status) {
+      case "pending":
+        break;
+      case "failed":
+        if (isError || !config.dataAfterTimeout) {
+          return;
+        }
+        break;
+      default:
+        return;
+    }
+    if (response === "abort") {
+      lastError = data;
+      failQuery();
+      return;
+    }
+    if (isError) {
+      lastError = data;
+      if (!queue.length) {
+        if (!resources.length) {
+          failQuery();
+        } else {
+          execNext();
+        }
+      }
+      return;
+    }
+    resetTimer();
+    clearQueue();
+    if (!config.random) {
+      const index = config.resources.indexOf(item.resource);
+      if (index !== -1 && index !== config.index) {
+        config.index = index;
+      }
+    }
+    status = "completed";
+    doneCallbacks.forEach((callback) => {
+      callback(data);
+    });
+  }
+  function execNext() {
+    if (status !== "pending") {
+      return;
+    }
+    resetTimer();
+    const resource = resources.shift();
+    if (resource === void 0) {
+      if (queue.length) {
+        timer = setTimeout(() => {
+          resetTimer();
+          if (status === "pending") {
+            clearQueue();
+            failQuery();
+          }
+        }, config.timeout);
+        return;
+      }
+      failQuery();
+      return;
+    }
+    const item = {
+      status: "pending",
+      resource,
+      callback: (status2, data) => {
+        moduleResponse(item, status2, data);
+      }
+    };
+    queue.push(item);
+    queriesSent++;
+    timer = setTimeout(execNext, config.rotate);
+    query(resource, payload, item.callback);
+  }
+  setTimeout(execNext);
+  return getQueryStatus;
+}
+
+// src/index.ts
+function initRedundancy(cfg) {
+  const config = {
+    ...defaultConfig,
+    ...cfg
+  };
+  let queries = [];
+  function cleanup() {
+    queries = queries.filter((item) => item().status === "pending");
+  }
+  function query(payload, queryCallback, doneCallback) {
+    const query2 = sendQuery(
+      config,
+      payload,
+      queryCallback,
+      (data, error) => {
+        cleanup();
+        if (doneCallback) {
+          doneCallback(data, error);
+        }
+      }
+    );
+    queries.push(query2);
+    return query2;
+  }
+  function find(callback) {
+    return queries.find((value) => {
+      return callback(value);
+    }) || null;
+  }
+  const instance = {
+    query,
+    find,
+    setIndex: (index) => {
+      config.index = index;
+    },
+    getIndex: () => config.index,
+    cleanup
+  };
+  return instance;
+}
+
+function emptyCallback$1() {
+}
+const redundancyCache = /* @__PURE__ */ Object.create(null);
+function getRedundancyCache(provider) {
+  if (!redundancyCache[provider]) {
+    const config = getAPIConfig(provider);
+    if (!config) {
+      return;
+    }
+    const redundancy = initRedundancy(config);
+    const cachedReundancy = {
+      config,
+      redundancy
+    };
+    redundancyCache[provider] = cachedReundancy;
+  }
+  return redundancyCache[provider];
+}
+function sendAPIQuery(target, query, callback) {
+  let redundancy;
+  let send;
+  if (typeof target === "string") {
+    const api = getAPIModule(target);
+    if (!api) {
+      callback(void 0, 424);
+      return emptyCallback$1;
+    }
+    send = api.send;
+    const cached = getRedundancyCache(target);
+    if (cached) {
+      redundancy = cached.redundancy;
+    }
+  } else {
+    const config = createAPIConfig(target);
+    if (config) {
+      redundancy = initRedundancy(config);
+      const moduleKey = target.resources ? target.resources[0] : "";
+      const api = getAPIModule(moduleKey);
+      if (api) {
+        send = api.send;
+      }
+    }
+  }
+  if (!redundancy || !send) {
+    callback(void 0, 424);
+    return emptyCallback$1;
+  }
+  return redundancy.query(query, send, callback)().abort;
+}
+
+const browserCacheVersion = "iconify2";
+const browserCachePrefix = "iconify";
+const browserCacheCountKey = browserCachePrefix + "-count";
+const browserCacheVersionKey = browserCachePrefix + "-version";
+const browserStorageHour = 36e5;
+const browserStorageCacheExpiration = 168;
+
+function getStoredItem(func, key) {
+  try {
+    return func.getItem(key);
+  } catch (err) {
+  }
+}
+function setStoredItem(func, key, value) {
+  try {
+    func.setItem(key, value);
+    return true;
+  } catch (err) {
+  }
+}
+function removeStoredItem(func, key) {
+  try {
+    func.removeItem(key);
+  } catch (err) {
+  }
+}
+
+function setBrowserStorageItemsCount(storage, value) {
+  return setStoredItem(storage, browserCacheCountKey, value.toString());
+}
+function getBrowserStorageItemsCount(storage) {
+  return parseInt(getStoredItem(storage, browserCacheCountKey)) || 0;
+}
+
+const browserStorageConfig = {
+  local: true,
+  session: true
+};
+const browserStorageEmptyItems = {
+  local: /* @__PURE__ */ new Set(),
+  session: /* @__PURE__ */ new Set()
+};
+let browserStorageStatus = false;
+function setBrowserStorageStatus(status) {
+  browserStorageStatus = status;
+}
+
+let _window = typeof window === "undefined" ? {} : window;
+function getBrowserStorage(key) {
+  const attr = key + "Storage";
+  try {
+    if (_window && _window[attr] && typeof _window[attr].length === "number") {
+      return _window[attr];
+    }
+  } catch (err) {
+  }
+  browserStorageConfig[key] = false;
+}
+
+function iterateBrowserStorage(key, callback) {
+  const func = getBrowserStorage(key);
+  if (!func) {
+    return;
+  }
+  const version = getStoredItem(func, browserCacheVersionKey);
+  if (version !== browserCacheVersion) {
+    if (version) {
+      const total2 = getBrowserStorageItemsCount(func);
+      for (let i = 0; i < total2; i++) {
+        removeStoredItem(func, browserCachePrefix + i.toString());
+      }
+    }
+    setStoredItem(func, browserCacheVersionKey, browserCacheVersion);
+    setBrowserStorageItemsCount(func, 0);
+    return;
+  }
+  const minTime = Math.floor(Date.now() / browserStorageHour) - browserStorageCacheExpiration;
+  const parseItem = (index) => {
+    const name = browserCachePrefix + index.toString();
+    const item = getStoredItem(func, name);
+    if (typeof item !== "string") {
+      return;
+    }
+    try {
+      const data = JSON.parse(item);
+      if (typeof data === "object" && typeof data.cached === "number" && data.cached > minTime && typeof data.provider === "string" && typeof data.data === "object" && typeof data.data.prefix === "string" && callback(data, index)) {
+        return true;
+      }
+    } catch (err) {
+    }
+    removeStoredItem(func, name);
+  };
+  let total = getBrowserStorageItemsCount(func);
+  for (let i = total - 1; i >= 0; i--) {
+    if (!parseItem(i)) {
+      if (i === total - 1) {
+        total--;
+        setBrowserStorageItemsCount(func, total);
+      } else {
+        browserStorageEmptyItems[key].add(i);
+      }
+    }
+  }
+}
+
+function initBrowserStorage() {
+  if (browserStorageStatus) {
+    return;
+  }
+  setBrowserStorageStatus(true);
+  for (const key in browserStorageConfig) {
+    iterateBrowserStorage(key, (item) => {
+      const iconSet = item.data;
+      const provider = item.provider;
+      const prefix = iconSet.prefix;
+      const storage = getStorage(
+        provider,
+        prefix
+      );
+      if (!addIconSet(storage, iconSet).length) {
+        return false;
+      }
+      const lastModified = iconSet.lastModified || -1;
+      storage.lastModifiedCached = storage.lastModifiedCached ? Math.min(storage.lastModifiedCached, lastModified) : lastModified;
+      return true;
+    });
+  }
+}
+
+function updateLastModified(storage, lastModified) {
+  const lastValue = storage.lastModifiedCached;
+  if (lastValue && lastValue >= lastModified) {
+    return lastValue === lastModified;
+  }
+  storage.lastModifiedCached = lastModified;
+  if (lastValue) {
+    for (const key in browserStorageConfig) {
+      iterateBrowserStorage(key, (item) => {
+        const iconSet = item.data;
+        return item.provider !== storage.provider || iconSet.prefix !== storage.prefix || iconSet.lastModified === lastModified;
+      });
+    }
+  }
+  return true;
+}
+function storeInBrowserStorage(storage, data) {
+  if (!browserStorageStatus) {
+    initBrowserStorage();
+  }
+  function store(key) {
+    let func;
+    if (!browserStorageConfig[key] || !(func = getBrowserStorage(key))) {
+      return;
+    }
+    const set = browserStorageEmptyItems[key];
+    let index;
+    if (set.size) {
+      set.delete(index = Array.from(set).shift());
+    } else {
+      index = getBrowserStorageItemsCount(func);
+      if (!setBrowserStorageItemsCount(func, index + 1)) {
+        return;
+      }
+    }
+    const item = {
+      cached: Math.floor(Date.now() / browserStorageHour),
+      provider: storage.provider,
+      data
+    };
+    return setStoredItem(
+      func,
+      browserCachePrefix + index.toString(),
+      JSON.stringify(item)
+    );
+  }
+  if (data.lastModified && !updateLastModified(storage, data.lastModified)) {
+    return;
+  }
+  if (!Object.keys(data.icons).length) {
+    return;
+  }
+  if (data.not_found) {
+    data = Object.assign({}, data);
+    delete data.not_found;
+  }
+  if (!store("local")) {
+    store("session");
+  }
+}
+
+function emptyCallback() {
+}
+function loadedNewIcons(storage) {
+  if (!storage.iconsLoaderFlag) {
+    storage.iconsLoaderFlag = true;
+    setTimeout(() => {
+      storage.iconsLoaderFlag = false;
+      updateCallbacks(storage);
+    });
+  }
+}
+function loadNewIcons(storage, icons) {
+  if (!storage.iconsToLoad) {
+    storage.iconsToLoad = icons;
+  } else {
+    storage.iconsToLoad = storage.iconsToLoad.concat(icons).sort();
+  }
+  if (!storage.iconsQueueFlag) {
+    storage.iconsQueueFlag = true;
+    setTimeout(() => {
+      storage.iconsQueueFlag = false;
+      const { provider, prefix } = storage;
+      const icons2 = storage.iconsToLoad;
+      delete storage.iconsToLoad;
+      let api;
+      if (!icons2 || !(api = getAPIModule(provider))) {
+        return;
+      }
+      const params = api.prepare(provider, prefix, icons2);
+      params.forEach((item) => {
+        sendAPIQuery(provider, item, (data, error) => {
+          if (typeof data !== "object") {
+            if (error !== 404) {
+              return;
+            }
+            item.icons.forEach((name) => {
+              storage.missing.add(name);
+            });
+          } else {
+            try {
+              const parsed = addIconSet(
+                storage,
+                data
+              );
+              if (!parsed.length) {
+                return;
+              }
+              const pending = storage.pendingIcons;
+              if (pending) {
+                parsed.forEach((name) => {
+                  pending.delete(name);
+                });
+              }
+              storeInBrowserStorage(storage, data);
+            } catch (err) {
+              console.error(err);
+            }
+          }
+          loadedNewIcons(storage);
+        });
+      });
+    });
+  }
+}
+const loadIcons = (icons, callback) => {
+  const cleanedIcons = listToIcons(icons, true, allowSimpleNames());
+  const sortedIcons = sortIcons(cleanedIcons);
+  if (!sortedIcons.pending.length) {
+    let callCallback = true;
+    if (callback) {
+      setTimeout(() => {
+        if (callCallback) {
+          callback(
+            sortedIcons.loaded,
+            sortedIcons.missing,
+            sortedIcons.pending,
+            emptyCallback
+          );
+        }
+      });
+    }
+    return () => {
+      callCallback = false;
+    };
+  }
+  const newIcons = /* @__PURE__ */ Object.create(null);
+  const sources = [];
+  let lastProvider, lastPrefix;
+  sortedIcons.pending.forEach((icon) => {
+    const { provider, prefix } = icon;
+    if (prefix === lastPrefix && provider === lastProvider) {
+      return;
+    }
+    lastProvider = provider;
+    lastPrefix = prefix;
+    sources.push(getStorage(provider, prefix));
+    const providerNewIcons = newIcons[provider] || (newIcons[provider] = /* @__PURE__ */ Object.create(null));
+    if (!providerNewIcons[prefix]) {
+      providerNewIcons[prefix] = [];
+    }
+  });
+  sortedIcons.pending.forEach((icon) => {
+    const { provider, prefix, name } = icon;
+    const storage = getStorage(provider, prefix);
+    const pendingQueue = storage.pendingIcons || (storage.pendingIcons = /* @__PURE__ */ new Set());
+    if (!pendingQueue.has(name)) {
+      pendingQueue.add(name);
+      newIcons[provider][prefix].push(name);
+    }
+  });
+  sources.forEach((storage) => {
+    const { provider, prefix } = storage;
+    if (newIcons[provider][prefix].length) {
+      loadNewIcons(storage, newIcons[provider][prefix]);
+    }
+  });
+  return callback ? storeCallback(callback, sortedIcons, sources) : emptyCallback;
+};
+const loadIcon = (icon) => {
+  return new Promise((fulfill, reject) => {
+    const iconObj = typeof icon === "string" ? stringToIcon(icon) : icon;
+    loadIcons([iconObj || icon], (loaded) => {
+      if (loaded.length && iconObj) {
+        const data = getIconData(iconObj);
+        if (data) {
+          fulfill({
+            ...defaultIconProps,
+            ...data
+          });
+          return;
+        }
+      }
+      reject(icon);
+    });
+  });
+};
+
+function toggleBrowserCache(storage, value) {
+  switch (storage) {
+    case "local":
+    case "session":
+      browserStorageConfig[storage] = value;
+      break;
+    case "all":
+      for (const key in browserStorageConfig) {
+        browserStorageConfig[key] = value;
+      }
+      break;
+  }
+}
+
+function mergeCustomisations(defaults, item) {
+  const result = {
+    ...defaults
+  };
+  for (const key in item) {
+    const value = item[key];
+    const valueType = typeof value;
+    if (key in defaultIconSizeCustomisations) {
+      if (value === null || value && (valueType === "string" || valueType === "number")) {
+        result[key] = value;
+      }
+    } else if (valueType === typeof result[key]) {
+      result[key] = key === "rotate" ? value % 4 : value;
+    }
+  }
+  return result;
+}
+
+const separator = /[\s,]+/;
+function flipFromString(custom, flip) {
+  flip.split(separator).forEach((str) => {
+    const value = str.trim();
+    switch (value) {
+      case "horizontal":
+        custom.hFlip = true;
+        break;
+      case "vertical":
+        custom.vFlip = true;
+        break;
+    }
+  });
+}
+
+function rotateFromString(value, defaultValue = 0) {
+  const units = value.replace(/^-?[0-9.]*/, "");
+  function cleanup(value2) {
+    while (value2 < 0) {
+      value2 += 4;
+    }
+    return value2 % 4;
+  }
+  if (units === "") {
+    const num = parseInt(value);
+    return isNaN(num) ? 0 : cleanup(num);
+  } else if (units !== value) {
+    let split = 0;
+    switch (units) {
+      case "%":
+        split = 25;
+        break;
+      case "deg":
+        split = 90;
+    }
+    if (split) {
+      let num = parseFloat(value.slice(0, value.length - units.length));
+      if (isNaN(num)) {
+        return 0;
+      }
+      num = num / split;
+      return num % 1 === 0 ? cleanup(num) : 0;
+    }
+  }
+  return defaultValue;
+}
+
+function iconToHTML(body, attributes) {
+  let renderAttribsHTML = body.indexOf("xlink:") === -1 ? "" : ' xmlns:xlink="http://www.w3.org/1999/xlink"';
+  for (const attr in attributes) {
+    renderAttribsHTML += " " + attr + '="' + attributes[attr] + '"';
+  }
+  return '<svg xmlns="http://www.w3.org/2000/svg"' + renderAttribsHTML + ">" + body + "</svg>";
+}
+
+function encodeSVGforURL(svg) {
+  return svg.replace(/"/g, "'").replace(/%/g, "%25").replace(/#/g, "%23").replace(/</g, "%3C").replace(/>/g, "%3E").replace(/\s+/g, " ");
+}
+function svgToURL(svg) {
+  return 'url("data:image/svg+xml,' + encodeSVGforURL(svg) + '")';
+}
+
+const defaultExtendedIconCustomisations = {
+    ...defaultIconCustomisations,
+    inline: false,
+};
+
+/**
+ * Default SVG attributes
+ */
+const svgDefaults = {
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+    'aria-hidden': true,
+    'role': 'img',
+};
+/**
+ * Style modes
+ */
+const commonProps = {
+    display: 'inline-block',
+};
+const monotoneProps = {
+    backgroundColor: 'currentColor',
+};
+const coloredProps = {
+    backgroundColor: 'transparent',
+};
+// Dynamically add common props to variables above
+const propsToAdd = {
+    Image: 'var(--svg)',
+    Repeat: 'no-repeat',
+    Size: '100% 100%',
+};
+const propsToAddTo = {
+    webkitMask: monotoneProps,
+    mask: monotoneProps,
+    background: coloredProps,
+};
+for (const prefix in propsToAddTo) {
+    const list = propsToAddTo[prefix];
+    for (const prop in propsToAdd) {
+        list[prefix + prop] = propsToAdd[prop];
+    }
+}
+/**
+ * Aliases for customisations.
+ * In Vue 'v-' properties are reserved, so v-flip must be renamed
+ */
+const customisationAliases = {};
+['horizontal', 'vertical'].forEach((prefix) => {
+    const attr = prefix.slice(0, 1) + 'Flip';
+    // vertical-flip
+    customisationAliases[prefix + '-flip'] = attr;
+    // v-flip
+    customisationAliases[prefix.slice(0, 1) + '-flip'] = attr;
+    // verticalFlip
+    customisationAliases[prefix + 'Flip'] = attr;
+});
+/**
+ * Fix size: add 'px' to numbers
+ */
+function fixSize(value) {
+    return value + (value.match(/^[-0-9.]+$/) ? 'px' : '');
+}
+/**
+ * Render icon
+ */
+const render = (
+// Icon must be validated before calling this function
+icon, 
+// Partial properties
+props) => {
+    // Split properties
+    const customisations = mergeCustomisations(defaultExtendedIconCustomisations, props);
+    const componentProps = { ...svgDefaults };
+    // Check mode
+    const mode = props.mode || 'svg';
+    // Copy style
+    const style = {};
+    const propsStyle = props.style;
+    const customStyle = typeof propsStyle === 'object' && !(propsStyle instanceof Array)
+        ? propsStyle
+        : {};
+    // Get element properties
+    for (let key in props) {
+        const value = props[key];
+        if (value === void 0) {
+            continue;
+        }
+        switch (key) {
+            // Properties to ignore
+            case 'icon':
+            case 'style':
+            case 'onLoad':
+            case 'mode':
+                break;
+            // Boolean attributes
+            case 'inline':
+            case 'hFlip':
+            case 'vFlip':
+                customisations[key] =
+                    value === true || value === 'true' || value === 1;
+                break;
+            // Flip as string: 'horizontal,vertical'
+            case 'flip':
+                if (typeof value === 'string') {
+                    flipFromString(customisations, value);
+                }
+                break;
+            // Color: override style
+            case 'color':
+                style.color = value;
+                break;
+            // Rotation as string
+            case 'rotate':
+                if (typeof value === 'string') {
+                    customisations[key] = rotateFromString(value);
+                }
+                else if (typeof value === 'number') {
+                    customisations[key] = value;
+                }
+                break;
+            // Remove aria-hidden
+            case 'ariaHidden':
+            case 'aria-hidden':
+                // Vue transforms 'aria-hidden' property to 'ariaHidden'
+                if (value !== true && value !== 'true') {
+                    delete componentProps['aria-hidden'];
+                }
+                break;
+            default: {
+                const alias = customisationAliases[key];
+                if (alias) {
+                    // Aliases for boolean customisations
+                    if (value === true || value === 'true' || value === 1) {
+                        customisations[alias] = true;
+                    }
+                }
+                else if (defaultExtendedIconCustomisations[key] === void 0) {
+                    // Copy missing property if it does not exist in customisations
+                    componentProps[key] = value;
+                }
+            }
+        }
+    }
+    // Generate icon
+    const item = iconToSVG(icon, customisations);
+    const renderAttribs = item.attributes;
+    // Inline display
+    if (customisations.inline) {
+        style.verticalAlign = '-0.125em';
+    }
+    if (mode === 'svg') {
+        // Add style
+        componentProps.style = {
+            ...style,
+            ...customStyle,
+        };
+        // Add icon stuff
+        Object.assign(componentProps, renderAttribs);
+        // Counter for ids based on "id" property to render icons consistently on server and client
+        let localCounter = 0;
+        let id = props.id;
+        if (typeof id === 'string') {
+            // Convert '-' to '_' to avoid errors in animations
+            id = id.replace(/-/g, '_');
+        }
+        // Add innerHTML and style to props
+        componentProps['innerHTML'] = replaceIDs(item.body, id ? () => id + 'ID' + localCounter++ : 'iconifyVue');
+        // Render icon
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)('svg', componentProps);
+    }
+    // Render <span> with style
+    const { body, width, height } = icon;
+    const useMask = mode === 'mask' ||
+        (mode === 'bg' ? false : body.indexOf('currentColor') !== -1);
+    // Generate SVG
+    const html = iconToHTML(body, {
+        ...renderAttribs,
+        width: width + '',
+        height: height + '',
+    });
+    // Generate style
+    componentProps.style = {
+        ...style,
+        '--svg': svgToURL(html),
+        'width': fixSize(renderAttribs.width),
+        'height': fixSize(renderAttribs.height),
+        ...commonProps,
+        ...(useMask ? monotoneProps : coloredProps),
+        ...customStyle,
+    };
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)('span', componentProps);
+};
+
+/**
+ * Enable cache
+ */
+function enableCache(storage) {
+    toggleBrowserCache(storage, true);
+}
+/**
+ * Disable cache
+ */
+function disableCache(storage) {
+    toggleBrowserCache(storage, false);
+}
+/**
+ * Initialise stuff
+ */
+// Enable short names
+allowSimpleNames(true);
+// Set API module
+setAPIModule('', fetchAPIModule);
+/**
+ * Browser stuff
+ */
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+    // Set cache and load existing cache
+    initBrowserStorage();
+    const _window = window;
+    // Load icons from global "IconifyPreload"
+    if (_window.IconifyPreload !== void 0) {
+        const preload = _window.IconifyPreload;
+        const err = 'Invalid IconifyPreload syntax.';
+        if (typeof preload === 'object' && preload !== null) {
+            (preload instanceof Array ? preload : [preload]).forEach((item) => {
+                try {
+                    if (
+                    // Check if item is an object and not null/array
+                    typeof item !== 'object' ||
+                        item === null ||
+                        item instanceof Array ||
+                        // Check for 'icons' and 'prefix'
+                        typeof item.icons !== 'object' ||
+                        typeof item.prefix !== 'string' ||
+                        // Add icon set
+                        !addCollection(item)) {
+                        console.error(err);
+                    }
+                }
+                catch (e) {
+                    console.error(err);
+                }
+            });
+        }
+    }
+    // Set API from global "IconifyProviders"
+    if (_window.IconifyProviders !== void 0) {
+        const providers = _window.IconifyProviders;
+        if (typeof providers === 'object' && providers !== null) {
+            for (let key in providers) {
+                const err = 'IconifyProviders[' + key + '] is invalid.';
+                try {
+                    const value = providers[key];
+                    if (typeof value !== 'object' ||
+                        !value ||
+                        value.resources === void 0) {
+                        continue;
+                    }
+                    if (!addAPIProvider(key, value)) {
+                        console.error(err);
+                    }
+                }
+                catch (e) {
+                    console.error(err);
+                }
+            }
+        }
+    }
+}
+/**
+ * Empty icon data, rendered when icon is not available
+ */
+const emptyIcon = {
+    ...defaultIconProps,
+    body: '',
+};
+const Icon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    // Do not inherit other attributes: it is handled by render()
+    inheritAttrs: false,
+    // Set initial data
+    data() {
+        return {
+            // Mounted status
+            iconMounted: false,
+            // Callback counter to trigger re-render
+            counter: 0,
+        };
+    },
+    mounted() {
+        // Current icon name
+        this._name = '';
+        // Loading
+        this._loadingIcon = null;
+        // Mark as mounted
+        this.iconMounted = true;
+    },
+    unmounted() {
+        this.abortLoading();
+    },
+    methods: {
+        abortLoading() {
+            if (this._loadingIcon) {
+                this._loadingIcon.abort();
+                this._loadingIcon = null;
+            }
+        },
+        // Get data for icon to render or null
+        getIcon(icon, onload) {
+            // Icon is an object
+            if (typeof icon === 'object' &&
+                icon !== null &&
+                typeof icon.body === 'string') {
+                // Stop loading
+                this._name = '';
+                this.abortLoading();
+                return {
+                    data: icon,
+                };
+            }
+            // Invalid icon?
+            let iconName;
+            if (typeof icon !== 'string' ||
+                (iconName = stringToIcon(icon, false, true)) === null) {
+                this.abortLoading();
+                return null;
+            }
+            // Load icon
+            const data = getIconData(iconName);
+            if (!data) {
+                // Icon data is not available
+                if (!this._loadingIcon || this._loadingIcon.name !== icon) {
+                    // New icon to load
+                    this.abortLoading();
+                    this._name = '';
+                    if (data !== null) {
+                        // Icon was not loaded
+                        this._loadingIcon = {
+                            name: icon,
+                            abort: loadIcons([iconName], () => {
+                                this.counter++;
+                            }),
+                        };
+                    }
+                }
+                return null;
+            }
+            // Icon data is available
+            this.abortLoading();
+            if (this._name !== icon) {
+                this._name = icon;
+                if (onload) {
+                    onload(icon);
+                }
+            }
+            // Add classes
+            const classes = ['iconify'];
+            if (iconName.prefix !== '') {
+                classes.push('iconify--' + iconName.prefix);
+            }
+            if (iconName.provider !== '') {
+                classes.push('iconify--' + iconName.provider);
+            }
+            return { data, classes };
+        },
+    },
+    // Render icon
+    render() {
+        // Re-render when counter changes
+        this.counter;
+        const props = this.$attrs;
+        // Get icon data
+        const icon = this.iconMounted
+            ? this.getIcon(props.icon, props.onLoad)
+            : null;
+        // Validate icon object
+        if (!icon) {
+            return render(emptyIcon, props);
+        }
+        // Add classes
+        let newProps = props;
+        if (icon.classes) {
+            newProps = {
+                ...props,
+                class: (typeof props['class'] === 'string'
+                    ? props['class'] + ' '
+                    : '') + icon.classes.join(' '),
+            };
+        }
+        // Render icon
+        return render({
+            ...defaultIconProps,
+            ...icon.data,
+        }, newProps);
+    },
+});
+/**
+ * Internal API
+ */
+const _api = {
+    getAPIConfig,
+    setAPIModule,
+    sendAPIQuery,
+    setFetch,
+    getFetch,
+    listAPIProviders,
+};
+
+
 
 
 /***/ })

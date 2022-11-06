@@ -26500,14 +26500,6 @@ var map = {
 	"./Index.vue": [
 		"./resources/views/adminkit/Index.vue",
 		"resources_views_adminkit_Index_vue"
-	],
-	"./Teste": [
-		"./resources/views/adminkit/Teste.vue",
-		"resources_views_adminkit_Teste_vue"
-	],
-	"./Teste.vue": [
-		"./resources/views/adminkit/Teste.vue",
-		"resources_views_adminkit_Teste_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -26658,7 +26650,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_views_adminkit_Index_vue":1,"resources_views_adminkit_Teste_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if (chunkId === "resources_views_adminkit_Index_vue") return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
